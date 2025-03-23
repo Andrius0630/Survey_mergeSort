@@ -1,0 +1,48 @@
+[
+    {
+        "candidateId": 2,
+        "vote": "Yes",
+        "month": 1
+    },
+    {
+        "candidateId": 1,
+        "vote": "Yes",
+        "month": 1
+    },
+    {
+        "candidateId": 4,
+        "vote": "Maybe",
+        "month": 1
+    },
+    {
+        "candidateId": 3,
+        "vote": "Yes",
+        "month": 2
+    },
+    {
+        "candidateId": 2,
+        "vote": "No",
+        "month": 2
+    },
+    {
+        "candidateId": 1,
+        "vote": "No",
+        "month": 2
+    },
+    {
+        "candidateId": 3,
+        "vote": "Yes",
+        "month": 3
+    },
+    {
+        "candidateId": 2,
+        "vote": "Maybe",
+        "month": 3
+    },
+    {
+        "candidateId": 4,
+        "vote": "No",
+        "month": 3
+    }
+  ]
+  
