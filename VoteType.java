@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
 public enum VoteType {
+    Yes,
+    No,
+    Maybe
 }
