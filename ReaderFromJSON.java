@@ -4,27 +4,21 @@ import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ReaderFromJSON {
-    private String fileName;
-
-    public ReaderFromJSON(String fileName) {
-        this.fileName = fileName;
-    }
-
-
-    public List<Candidate> readCandidates() throws IOException{
+    public HashMap<Integer, Candidate> readCandidates(String fileName) throws IOException{
         Gson gson = new Gson();
         try (Reader reader = new FileReader(fileName)) {
-            return gson.fromJson(reader, new TypeToken<List<Candidate>>() {}.getType());
+            return gson.fromJson(reader, new TypeToken<HashMap<Integer, Candidate>>() {}.getType());
         }
     }
 
-    public List<Result> readResults() throws IOException{
+    public ArrayList<Result> readResults(String fileName) throws IOException{
         Gson gson = new Gson();
         try (Reader reader = new FileReader(fileName)) {
-            return gson.fromJson(reader, new TypeToken<List<Result>>() {}.getType());
+            return gson.fromJson(reader, new TypeToken<ArrayList<Result>>() {}.getType());
         }
     }
 }
