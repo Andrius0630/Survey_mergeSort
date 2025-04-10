@@ -1,19 +1,16 @@
 import java.util.ArrayList;
 
 public class MergeSort {
-    public static void mergeSort(ArrayList<Result> arr) {
+    public static <T extends Comparable<T>> void mergeSort(ArrayList<T> arr) {
         int sizeArr = arr.size();
         if (sizeArr < 2)
             return;
 
         int middleIndex = sizeArr / 2;
-        ArrayList<Result> leftHalf = new ArrayList<>();
-        ArrayList<Result> rightHalf = new ArrayList<>();
+        ArrayList<T> leftHalf = new ArrayList<>();
+        ArrayList<T> rightHalf = new ArrayList<>();
 
-        int i = 0;
-        int j = 0;
-
-        for (; i < sizeArr; i++) {
+        for (int i = 0; i < sizeArr; i++) {
             if (i < middleIndex) {
                 leftHalf.add(arr.get(i));
             } else {
@@ -27,7 +24,7 @@ public class MergeSort {
         merge(leftHalf, rightHalf, arr);
     }
 
-    public static void merge(ArrayList<Result> leftArr, ArrayList<Result> rightArr, ArrayList<Result> mainArr) {
+    public static <T extends Comparable<T>> void merge(ArrayList<T> leftArr, ArrayList<T> rightArr, ArrayList<T> mainArr) {
         int leftSize = leftArr.size();
         int rightSize = rightArr.size();
 
